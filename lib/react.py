@@ -6,7 +6,7 @@ from re import search
 from dotenv import load_dotenv
 import os
 from .cmds import games, misc, cmds_list
-from .channelinfo import KEYWORDS
+from .channeldata import KEYWORDS
 from . import db
 
 load_dotenv()
