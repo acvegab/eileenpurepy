@@ -1,5 +1,6 @@
 from .. import db
-warning_timers = (1, 5, 60)
+from ..channeldata import WARNING_TIMERS
+
 def admin(func):
     def inner(*args, **kwargs):
         if args[2]['name'].lower() != args[0].OWNER:
@@ -19,8 +20,8 @@ def warn(bot, cmd, user, target=None, *reason):
 
         if warnings is None:
             bot.send_message("Ese usuario no ha visitado el canal aún")
-        elif warnings < len(warning_timers):
-            mins = warning_timers[warnings]
+        elif warnings < len(WARNING_TIMERS):
+            mins = WARNING_TIMERS[warnings]
             # bot.send_message(f"/timeout {target} {mins}m")
             bot.send_message(f"{target}, has sido silenciado por la razón siguiente: {reason}. Podrás enviar mensajes en {mins} minuto(s).")
 

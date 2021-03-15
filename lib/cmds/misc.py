@@ -3,7 +3,7 @@ from datetime import datetime
 from sys import exit
 from time import time
 from .. import db
-from channelinfo import social_url
+from ..channeldata import SOCIAL_URL
 
 BOOT_TIME = time()
 
@@ -19,7 +19,7 @@ def hello(bot, call, user, *args):
     bot.send_message(f"Hola {user['name']}!")
 
 def social(bot, call, user,*args):
-    bot.send_message(f"Hola {user['name']}! Puedes encontrar a Satokito en {call} {social_url[call]} ❤︎ ❤︎ ❤︎")
+    bot.send_message(f"Hola {user['name']}! Puedes encontrar a Satokito en {call} {SOCIAL_URL[call]} ❤︎ ❤︎ ❤︎")
     
 def about(bot, cmd, user, *args):
     bot.send_message("Version 1.0.0. Developed by Carolina. Special thanks to Carberra (Parafoxia) for the help")

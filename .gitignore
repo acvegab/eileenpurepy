@@ -4,4 +4,4 @@ env/
 $*
 *.lock
 *.db
-channelinfo.py
+channeldata.py

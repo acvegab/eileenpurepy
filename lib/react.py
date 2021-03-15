@@ -6,7 +6,7 @@ from re import search
 from dotenv import load_dotenv
 import os
 from .cmds import games, misc, cmds_list
-from .extradata import keywords
+from .channelinfo import KEYWORDS
 from . import db
 
 load_dotenv()
@@ -28,7 +28,7 @@ def process(bot, user, message):
             welcome(bot, user)
         elif "bye" in message:
             say_goodbye(bot,user)
-        for key, response in keywords.items():
+        for key, response in KEYWORDS.items():
             if key in message:
                 bot.send_message(response)
 

@@ -1,0 +1,4 @@
+KEYWORDS = {}
+SOCIAL_URL = {}
+CURSES = ()
+WARNING_TIMERS = ()

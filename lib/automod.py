@@ -1,8 +1,6 @@
 from collections import defaultdict
 from . import db
-
-CURSES = ("bum","poo")
-warning_timers = (1, 5, 60, 120, 180)
+from .channeldata import CURSES, WARNING_TIMERS
 
 def clear(bot, user, message):
     if any([curse in message for curse in CURSES]):

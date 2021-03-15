@@ -1,2 +1,0 @@
-keywords={}
-social_url={}
